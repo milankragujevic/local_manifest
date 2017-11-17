@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="Galaxy-MSM8916"
-           fetch="https://github.com"
-           revision="lineage-15.0" />
-
-
+ <remote name="Galaxy-MSM8916" fetch="https://github.com/Galaxy-MSM8916" revision="lineage-15.0"/>
+ <remote name="J510FN" fetch="https://github.com/blue-dogerino" />
+ <remote name="Lineage" fetch="https://github.com/LineageOS" revision="lineage-15.0"/>
 
   <remove-project name="device/generic/mini-emulator-arm64" />
   <remove-project name="device/generic/mini-emulator-x86" />
@@ -37,39 +35,39 @@
   <remove-project name="platform/sdk" />
  
   <!-- Qcom Common -->
-  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="Lineage"/>
 
  
  <!-- Galaxy J5 (SM-J500H - j53gxx) || (J500F-G-M-Y - j5lte) || (J500FN - j5nlte) || (J5008 - j5ltechn) -->
-  <project path="device/samsung/j5-common" name="Galaxy-MSM8916/android_device_samsung_j5-common" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j53gxx" name="Galaxy-MSM8916/android_device_samsung_j53gxx" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j5lte" name="Galaxy-MSM8916/android_device_samsung_j5lte" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/j5nlte" name="Galaxy-MSM8916/android_device_samsung_j5nlte" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/j5-common" name="android_device_samsung_j5-common" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/j53gxx" name="android_device_samsung_j53gxx" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/j5lte" name="android_device_samsung_j5lte" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/j5nlte" name="android_device_samsung_j5nlte" groups="device" remote="Galaxy-MSM8916"/>
 
  <!-- Galaxy J5 (J510FN - j5xnlte) -->
-   <project path="device/samsung/j5xnlte" name="Galaxy-MSM8916/android_device_samsung_j5nlte" groups="device" remote="Galaxy-MSM8916"/>
+   <project path="device/samsung/j5xnlte" name="android_device_samsung_j5xnlte" groups="device" remote="J510FN"/>
 
  <!-- Samsung MSM8916 Common Repos -->
-  <project path="device/samsung/msm8916-common" name="Galaxy-MSM8916/android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
-  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" groups="device" /> 
+  <project path="device/samsung/msm8916-common" name="android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" groups="device" remote="Lineage"/> 
 
  <!-- Dependencies -->
  <!--
   <project path="external/busybox" name="LineageOS/android_external_busybox" />
   -->
-  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" />
-  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings"/>
+  <project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" remote="Lineage"/>
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="Lineage"/>
   
   
  <!-- Samsung Hardware Repo -->
-  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="Lineage"/>
 
  <!-- Common Samsung MSM8916 Kernel -->
-  <project path="kernel/samsung/msm8916" name="Galaxy-MSM8916/android_kernel_samsung_msm8916" remote="Galaxy-MSM8916"/>
+  <project path="kernel/samsung/msm8916" name="android_kernel_samsung_msm8916" remote="Galaxy-MSM8916"/>
 
  <!-- Substratum Repo -->
- <project path="external/Substratum" name="Galaxy-MSM8916/android_external_substratum" remote="Galaxy-MSM8916" revision="master"/>
+ <project path="external/Substratum" name="android_external_substratum" remote="Galaxy-MSM8916" revision="master"/>
 
  <!-- Vendor Trees For All Device Trees -->
-  <project path="vendor/samsung" name="Galaxy-MSM8916/proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
 </manifest>
