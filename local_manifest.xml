@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- COPYRIGHT (c) 2017 Milan Kragujevic -->
+    <remote name="Galaxy-MSM8916" fetch="https://github.com/Galaxy-MSM8916" revision="lineage-15.0"/>
+    <remote name="J510FN" fetch="https://github.com/milankragujevic" />
+    <remote name="Lineage" fetch="https://github.com/LineageOS" revision="lineage-15.0"/>
+    <project path="device/qcom/common" name="android_device_qcom_common" remote="Lineage"/>
+    <project path="device/samsung/j5xnlte" name="android_device_samsung_j5xnlte" groups="device" remote="J510FN"/>
+    <project path="device/samsung/msm8916-common" name="android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
+    <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" groups="device" remote="Lineage"/> 
+    <project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" remote="Lineage"/>
+    <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="Lineage"/>
+    <project path="hardware/samsung" name="android_hardware_samsung" remote="Lineage"/>
+    <project path="kernel/samsung/msm8916" name="android_kernel_samsung_msm8916" remote="Galaxy-MSM8916"/>
+    <project path="vendor/samsung" name="proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
+</manifest>
